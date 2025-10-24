@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Review — Web UI</title>
+
+  <!-- Inter font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">
+          <img src="/images/logo.png" alt="Movie logo" class="logo-img">
+        </div>
+        <div>
+          <div class="title">Movie Review</div>
+          <div class="subtitle">Browse movies • Add a review • Curate your profile</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="search">
+          <input id="searchInput" placeholder="Search movies..." />
+        </div>
+        <button id="refreshBtn" class="btn ghost">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+        <section style="flex:1; min-width:320px;">
+          <!-- HERO POSTER (large poster in the left blank area) -->
+          <div class="hero">
+            <div class="hero-poster" id="heroPoster">
+              <img id="heroPosterImg" src="/images/mrfox.jpg" alt="Poster — Fantastic Mr. Fox" />
+            </div>
+          </div>
+
+          <!-- Movie grid (kept for browsing below the hero) -->
+          <div id="movieGrid" class="movie-grid"></div>
+        </section>
+
+        <aside style="width:360px; max-width:100%;">
+          <div class="review-panel" id="reviewPanel">
+            <h3 style="margin:0 0 12px 0">Add a Review</h3>
+
+            <div class="form-row">
+              <label>Movie</label>
+              <select id="movieSelect" class="input"></select>
+            </div>
+
+            <div class="form-row">
+              <label>Choose poster</label>
+              <div id="posterChoices" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+            </div>
+
+            <div class="form-row">
+              <label>Your review</label>
+              <textarea id="reviewText" class="input" placeholder="Write your thoughts..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <label>Rating</label>
+              <div class="rating" id="ratingStars" aria-label="Rating">
+                <input type="radio" name="rating" id="r5" value="5">
+                <label for="r5" title="5 stars" aria-hidden="true"></label>
+
+                <input type="radio" name="rating" id="r4" value="4">
+                <label for="r4" title="4 stars" aria-hidden="true"></label>
+
+                <input type="radio" name="rating" id="r3" value="3">
+                <label for="r3" title="3 stars" aria-hidden="true"></label>
+
+                <input type="radio" name="rating" id="r2" value="2">
+                <label for="r2" title="2 stars" aria-hidden="true"></label>
+
+                <input type="radio" name="rating" id="r1" value="1">
+                <label for="r1" title="1 star" aria-hidden="true"></label>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <button id="submitReview" class="btn">Submit Review</button>
+              <button id="clearForm" class="btn ghost">Clear</button>
+            </div>
+
+            <div class="note" style="margin-top:12px">
+              Tip: Click a movie card to preload it into the review form. Select a poster thumbnail to attach an image to your review.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

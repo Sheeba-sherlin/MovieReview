@@ -1,0 +1,31 @@
+{
+  "movies": [
+    {
+      "title": "Interstellar",
+      "ratings": [5, 4, 5],
+      "reviews": [
+        "A masterpiece of science fiction!",
+        "Incredible visuals and a gripping story.",
+        "An emotional journey through space and time."
+      ]
+    },
+    {
+      "title": "Inception",
+      "ratings": [5, 5, 4],
+      "reviews": [
+        "Mind-bending and thought-provoking.",
+        "A thrilling ride with stunning visuals.",
+        "The concept of dreams within dreams is fascinating."
+      ]
+    },
+    {
+      "title": "Tenet",
+      "ratings": [4, 3, 4],
+      "reviews": [
+        "A complex narrative that requires attention.",
+        "Great action sequences and a unique concept.",
+        "Not for everyone, but worth a watch."
+      ]
+    }
+  ]
+}
